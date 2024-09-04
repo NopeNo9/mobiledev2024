@@ -8,37 +8,43 @@ import vn.edu.usth.weather.R;
 
 
 public class WeatherActivity extends AppCompatActivity {
-    private static final String TAG = "Weather Activity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_weather2);
-        Log.i(TAG, "=== APP CREATED ===");
+        setContentView(R.layout.fragment_forecast);
+        Log.i("onCreate", "=== APP CREATED ===");
         ForecastFragment firstFragment = new ForecastFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.container, firstFragment).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.main, firstFragment).commit();
     }
 
     @Override
-    protected void onPause(){
-        super.onPause();
-        Log.i(TAG, "=== APP CREATED ===");
+    protected void onStart() {
+        super.onStart();
+        Log.i("onStart ", "=== APP STARTED ===");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.i(TAG, "=== APP CREATED ===");
+        Log.i("onResume ", "=== APP CREATED ===");
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        Log.i("onPause", "=== APP CREATED ===");
     }
 
     @Override
     protected void onStop(){
         super.onStop();
-        Log.i(TAG, "=== APP CREATED ===");
+        Log.i("onStop ", "=== APP CREATED ===");
     }
 
     @Override
     protected void onDestroy(){
         super.onDestroy();
-        Log.i(TAG, "=== APP CREATED ===");
+        Log.i("onDestroy", "=== APP CREATED ===");
     }
 }
