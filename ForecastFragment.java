@@ -46,7 +46,6 @@ public class ForecastFragment extends Fragment {
         v.setBackgroundColor(0x20FF0000);
         TextView day = new TextView(getContext());
         day.setText("Thursday");
-
         ImageView img = new ImageView(getContext());
         img.setImageResource(R.drawable.sunny);
         return v;
