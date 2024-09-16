@@ -5,24 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
-    android:orientation="vertical"
-    tools:context=".mobiledev2024.WeatherActivity">
-    <LinearLayout
+    tools:context=".mobiledev2024.WeatherActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <fragment
-            android:id="@+id/main2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:name="vn.edu.usth.weather.mobiledev2024.WeatherFragment"
-            tools:layout="@layout/fragment_weather" />
-        <fragment
-            android:id="@+id/main1"
-            android:layout_width= "match_parent"
-            android:layout_height="wrap_content"
-            android:name="vn.edu.usth.weather.mobiledev2024.ForecastFragment"
-            tools:layout="@layout/fragment_forecast" />
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/weather_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.viewpager.widget.ViewPager>
 </LinearLayout>
