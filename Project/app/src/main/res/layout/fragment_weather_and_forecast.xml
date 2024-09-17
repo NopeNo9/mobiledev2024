@@ -15,13 +15,13 @@
             android:id="@+id/weather_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:name="vn.edu.usth.weather.mobiledev2024.WeatherFragment"
+            android:name="vn.edu.usth.weather.WeatherFragment"
             tools:layout="@layout/fragment_weather" />
         <fragment
             android:id="@+id/forecast_main"
             android:layout_width= "match_parent"
             android:layout_height="wrap_content"
-            android:name="vn.edu.usth.weather.mobiledev2024.ForecastFragment"
+            android:name="vn.edu.usth.weather.ForecastFragment"
             tools:layout="@layout/fragment_forecast" />
     </LinearLayout>
 </LinearLayout>
